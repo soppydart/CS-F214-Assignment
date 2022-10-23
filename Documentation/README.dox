@@ -2,9 +2,8 @@
 
 @mainpage CS-F214 Assignment-1
 
-@authors Saksham Attri 2021A7PS2950H, Pranav Dinesh Sharma 2021A7PS2818H, Pritam Basu 2021A7PS20212175H
+@authors Saksham Attri 2021A7PS2950H, Pranav Dinesh Sharma 2021A7PS2818H, Pritam Basu 2021A7PS2175H
 
-Enter requirements, how to run it, difficulties faced, major bugs etc.
 
 Requirements: 
  - GCC to compile the C code
@@ -18,8 +17,13 @@ Problems we faced and Bugs:
  - We struggled with cases where the negation operator was involved in the logical formula since it is a unary operator, unlike the other logical operators which are binary, but we were able to overcome this by having separate cases for it.
  - We did not encounter any memory leaks, but almost did not account for them till the very end.
 
+Code Analysis:
+ - We used structs to make nodes for our trees.
+ - We largely used recursive logic to realize our ideas.
+
 
 Profiling:
+ - We used Gprof as our profiler.
  - Task 1:
    - Unfortunately, for logical formulas with a relatively small number of characters, the profiler indicated very low times to run (zero seconds).
    - With 16,777,212 characters, it took 0.27 seconds in all.
