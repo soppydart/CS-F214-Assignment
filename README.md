@@ -16,7 +16,7 @@ make
 ./exec
 ```
 ### If running without GNU Make
-Run the following in `<some-directory`:
+Run the following in `<some-directory>`:
 ```console
 gcc -c main.c -o main.o
 gcc -c Task1/infixToPrefix.c -o infixToPrefix.o
