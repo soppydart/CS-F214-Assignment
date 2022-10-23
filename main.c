@@ -56,7 +56,8 @@ int main(){
     infix[i]='\0';  // infix is a string
     lenInfix = i-1;
     char prefix[lenInfix];  // creating buffer to store prefix
-    int lenPrefix = infixToPrefix(infix,prefix);
+    char stack[lenInfix];
+    int lenPrefix = infixToPrefix(infix,stack,prefix,lenInfix);
     printf("The prefix form of above input is : %s",prefix);
 
     // creating root for binary tree
@@ -76,7 +77,7 @@ int main(){
 
     printf("\nDo you want to print the tree (not recommended for height > 6 , current height: %d)? (experimental) (y/n): ",h);
     char choice;
-    scanf("%c",choice);
+    scanf("%c",&choice);
     if (choice == 'y' || choice == 'Y')
         draw(root,h);
 
@@ -103,9 +104,13 @@ int main(){
 
     printf("\nDo you want to repeat for another input: (y/n) \n>");
     char choice2;
+    getchar();
     scanf("%c",&choice2);
-    if (choice2 == 'y' || choice2 == 'Y')
+    if (choice2 == 'y' || choice2 == 'Y'){
+        getchar();
         main();
-
+    }
+    else
+        printf("\nExiting ...\n");
     return 0;
 }
