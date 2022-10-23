@@ -1,0 +1,235 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 21.30      1.05     1.05        1     1.05     1.05  parser
+ 15.21      1.80     0.75 67108862     0.00     0.00  isFull
+ 11.16      2.35     0.55        1     0.55     0.55  height
+  9.53      2.82     0.47        2     0.23     0.23  reverse
+  6.90      3.16     0.34        1     0.34     0.34  brackets
+  6.59      3.48     0.33        1     0.33     1.86  getPostfix
+  5.88      3.77     0.29 335544311     0.00     0.00  isEmpty
+  5.27      4.04     0.26        1     0.26     0.26  prefin
+  3.04      4.18     0.15        1     0.15     0.15  judge
+  2.84      4.33     0.14 67108862     0.00     0.00  pop
+  2.64      4.46     0.13                             main
+  2.43      4.58     0.12                             _init
+  2.23      4.68     0.11 134217725     0.00     0.00  checkIfOperand
+  2.03      4.79     0.10 134217724     0.00     0.00  peek
+  2.03      4.88     0.10 67108862     0.00     0.00  push
+  0.91      4.93     0.04 67108862     0.00     0.00  priority
+  0.00      4.93     0.00        1     0.00     2.67  infixToPrefix
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.20% of 4.93 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     97.6    0.13    4.68                 main [1]
+                0.00    2.67       1/1           infixToPrefix [2]
+                1.05    0.00       1/1           parser [4]
+                0.55    0.00       1/1           height [7]
+                0.26    0.00       1/1           prefin [11]
+                0.15    0.00       1/1           judge [14]
+-----------------------------------------------
+                0.00    2.67       1/1           main [1]
+[2]     54.2    0.00    2.67       1         infixToPrefix [2]
+                0.33    1.53       1/1           getPostfix [3]
+                0.47    0.00       2/2           reverse [8]
+                0.34    0.00       1/1           brackets [9]
+-----------------------------------------------
+                0.33    1.53       1/1           infixToPrefix [2]
+[3]     37.7    0.33    1.53       1         getPostfix [3]
+                0.10    0.75 67108862/67108862     push [5]
+                0.10    0.12 134217724/134217724     peek [12]
+                0.14    0.06 67108862/67108862     pop [13]
+                0.12    0.00 134217725/335544311     isEmpty [10]
+                0.11    0.00 134217725/134217725     checkIfOperand [16]
+                0.04    0.00 67108862/67108862     priority [17]
+-----------------------------------------------
+                             134217700             parser [4]
+                1.05    0.00       1/1           main [1]
+[4]     21.3    1.05    0.00       1+134217700 parser [4]
+                             134217700             parser [4]
+-----------------------------------------------
+                0.10    0.75 67108862/67108862     getPostfix [3]
+[5]     17.2    0.10    0.75 67108862         push [5]
+                0.75    0.00 67108862/67108862     isFull [6]
+-----------------------------------------------
+                0.75    0.00 67108862/67108862     push [5]
+[6]     15.2    0.75    0.00 67108862         isFull [6]
+-----------------------------------------------
+                0.55    0.00       1/1           main [1]
+[7]     11.2    0.55    0.00       1         height [7]
+-----------------------------------------------
+                0.47    0.00       2/2           infixToPrefix [2]
+[8]      9.5    0.47    0.00       2         reverse [8]
+-----------------------------------------------
+                0.34    0.00       1/1           infixToPrefix [2]
+[9]      6.9    0.34    0.00       1         brackets [9]
+-----------------------------------------------
+                0.06    0.00 67108862/335544311     pop [13]
+                0.12    0.00 134217724/335544311     peek [12]
+                0.12    0.00 134217725/335544311     getPostfix [3]
+[10]     5.9    0.29    0.00 335544311         isEmpty [10]
+-----------------------------------------------
+                             67108862             prefin [11]
+                0.26    0.00       1/1           main [1]
+[11]     5.3    0.26    0.00       1+67108862 prefin [11]
+                             67108862             prefin [11]
+-----------------------------------------------
+                0.10    0.12 134217724/134217724     getPostfix [3]
+[12]     4.4    0.10    0.12 134217724         peek [12]
+                0.12    0.00 134217724/335544311     isEmpty [10]
+-----------------------------------------------
+                0.14    0.06 67108862/67108862     getPostfix [3]
+[13]     4.0    0.14    0.06 67108862         pop [13]
+                0.06    0.00 67108862/335544311     isEmpty [10]
+-----------------------------------------------
+                             67108862             judge [14]
+                0.15    0.00       1/1           main [1]
+[14]     3.0    0.15    0.00       1+67108862 judge [14]
+                             67108862             judge [14]
+-----------------------------------------------
+                                                 <spontaneous>
+[15]     2.4    0.12    0.00                 _init [15]
+-----------------------------------------------
+                0.11    0.00 134217725/134217725     getPostfix [3]
+[16]     2.2    0.11    0.00 134217725         checkIfOperand [16]
+-----------------------------------------------
+                0.04    0.00 67108862/67108862     getPostfix [3]
+[17]     0.9    0.04    0.00 67108862         priority [17]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [15] _init                  [10] isEmpty                [13] pop
+   [9] brackets                [6] isFull                 [11] prefin
+  [16] checkIfOperand         [14] judge                  [17] priority
+   [3] getPostfix              [1] main                    [5] push
+   [7] height                  [4] parser                  [8] reverse
+   [2] infixToPrefix          [12] peek
