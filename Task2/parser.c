@@ -1,6 +1,5 @@
 /** @file parser.c
  *  @brief Contains definition for parser()
- *  @author Saksham Attri
  *  @bug No known bugs.
  */
 

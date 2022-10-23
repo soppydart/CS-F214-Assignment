@@ -1,6 +1,5 @@
 /** @file height.c
  *  @brief Contains definition for height()
- *  @author Saksham Attri
  *  @bug No known bugs.
  */
 

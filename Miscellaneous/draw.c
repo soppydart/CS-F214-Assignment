@@ -1,6 +1,5 @@
 /** @file draw.c
  *  @brief Contains definition for draw()
- *  @author Saksham Attri
  *  @bug For larger inputs, one atom may overwrite another thus distorting the output.
  */
 

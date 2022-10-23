@@ -1,6 +1,5 @@
 /** @file prefin.c
  *  @brief Contains definition for prefin()
- *  @author Saksham Attri
  *  @bug No known bugs.
  */
 

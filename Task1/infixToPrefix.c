@@ -1,6 +1,5 @@
 /** @file infixToPrefix.c
  *  @brief Contains definition for infix to prefix conversion
- *  @author Saksham Attri
  *  @bug No known bugs.
  */
 
