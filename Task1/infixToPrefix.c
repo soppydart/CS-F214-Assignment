@@ -1,106 +1,110 @@
-#include<stdio.h>
-#include<string.h> 
-#include<limits.h>
+/** @file infixToPrefix.c
+ *  @brief Contains definition for infix to prefix conversion
+ *  @author Saksham Attri
+ *  @bug No known bugs.
+ */
+
+/* -- Includes -- */
+
+/* libc includes */
+
+#include<stdio.h> 
+#include<string.h> /* for using the strlen() and strcpy() functions */ 
+#include<limits.h> 
 #include<stdlib.h>
 
 int top = -1;
 
-// checking if stack is full
+// checking if the stack is full
 int isFull(int lenInfix) {
-    return top == lenInfix - 1;
+    if(top == lenInfix - 1) return 1;
+    else return 0;
 } 
 
-// checking if stack is empty
+// checking if the stack is empty
 int isEmpty() {
-    return top == -1; 
+    if(top == -1) return 1;
+    else return 0; 
 }
 
-// Push function here, inserts value in stack and increments stack top by 1
+// push function which inserts value in the stack and increments top
 void push(char item,int lenInfix,char * stack) {
-    if (isFull(lenInfix)) 
-        return; 
+    if (isFull(lenInfix)) return; 
 	top++;
 	stack[top] = item;
 }
 
-// Function to remove an item from stack.  It decreases top by 1 
+// pop function which removes an item from the stack and decrements top 
 int pop(char * stack) { 
-    if (isEmpty()) 
-        return INT_MIN; 
+    if (isEmpty()) return INT_MIN; 
         
     // decrements top and returns what has been popped      
     return stack[top--]; 
 } 
 
-// Function to return the top from stack without removing it 
+// peek function to return the top of the stack 
 int peek(char * stack){ 
-    if (isEmpty()) 
-        return INT_MIN; 
+    if (isEmpty()) return INT_MIN; 
     return stack[top]; 
 } 
 
-// A utility function to check if the given character is operand 
+// a function to check if the given character is a propositional atom 
 int checkIfOperand(char ch) {
-    return (ch >= 'a' && ch <= 'z' && ch != '~' ) || (ch >= 'A' && ch <= 'Z' && ch!= '~'); 
+    return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
 } 
 
-// Fucntion to compare precedence
-// If we return larger value means higher precedence 
-int precedence(char ch) 
+// priority function to compare priority. It returns a larger value for a higher priority operator   
+int priority(char ch) 
 { 
     switch(ch) {
 		case '+':
-		        case '-':
-		        return 2;
+		return 3;
 		break;
-		case '*':
-		        case '/':
-		        return 4;
+
+		case '*':    
+		return 4;
 		break;
-		case '~':
-		        case '^':
-		        return 6;
+
+		case '~':        
+		return 5;
 		break;
-		case '#':
-		        case '(':
-		        case ')':
-		        return 1;
+
+        case '>':
+        return 2;
+        break;
+
+		case '(':       
+		case ')':
+		return 1;
 		break;
 	}
     return -1; 
 }
 
-// The driver function for infix to postfix conversion 
+// getPostfix function to convert an infix expression to a postfix expression
 int getPostfix(char* expression, char * stack, int lenInfix) 
 { 
     int i, j;
 
     for (i = 0, j = -1; expression[i]; ++i) 
     { 
-        // Here we are checking is the character we scanned is operand or not
-        // and this adding to to output. 
-        if (checkIfOperand(expression[i])) 
-            expression[++j] = expression[i]; 
+        // we check whether the scanned character is an operand or not and add this to the output
+        if (checkIfOperand(expression[i])) expression[++j] = expression[i]; 
 
-        // Here, if we scan character ‘(‘, we need push it to the stack. 
-        else if (expression[i] == '(') 
-            push(expression[i],lenInfix,stack); 
+        // we push '(' to the stack if we scan it
+        else if (expression[i] == '(') push(expression[i],lenInfix,stack); 
 
-        // Here, if we scan character is an ‘)’, we need to pop and print from the stack  
-        // do this until an ‘(‘ is encountered in the stack. 
+        // if the scanned character is ')', we need to pop from the stack till '(' is encountered in the stack 
         else if (expression[i] == ')') 
         { 
-            while (!isEmpty(stack) && peek(stack) != '(') 
-                expression[++j] = pop(stack); 
-            if (!isEmpty(stack) && peek(stack) != '(') 
-                return -1; // invalid expression              
-            else
-                pop(stack); 
+            while (!isEmpty(stack) && peek(stack) != '(') expression[++j] = pop(stack);
+            
+            if (!isEmpty(stack) && peek(stack) != '(')return -1; // invalid expression              
+            else pop(stack); 
         } 
-        else // if an opertor
+        else // if the scanned character is an operator
         { 
-            while (!isEmpty(stack) && precedence(expression[i]) <= precedence(peek(stack))) 
-                expression[++j] = pop(stack); 
+            while (!isEmpty(stack) && priority(expression[i]) <= priority(peek(stack))) expression[++j] = pop(stack); 
             push(expression[i],lenInfix,stack); 
         } 
 
@@ -115,6 +119,7 @@ int getPostfix(char* expression, char * stack, int lenInfix)
     
 }
 
+// a function to reverse a string
 void reverse(char *exp){
 
     int size = strlen(exp);
@@ -130,6 +135,8 @@ void reverse(char *exp){
     }
     strcpy(exp,temp);
 }
+
+// a function to swap brackets
 void brackets(char* exp){
     int i = 0;
     while(exp[i]!='\0')
@@ -141,6 +148,13 @@ void brackets(char* exp){
         i++;
     }
 }
+
+// the function to convert the infix expression into a prefix expression
+
+/** @brief Definition of infixToPrefix() function
+ *
+ *  Put profiled data here
+ */
 int infixToPrefix(char *exp, char * stack, char * prefix, int lenInfix)
 {
 
@@ -148,11 +162,11 @@ int infixToPrefix(char *exp, char * stack, char * prefix, int lenInfix)
 
     // reverse string
     reverse(exp);
-    //change brackets
+    // swap brackets
     brackets(exp);
-    //get postfix
+    // get the postfix expression 
     getPostfix(exp,stack,lenInfix);
-    // reverse string again
+    // reverse the string again to get the prefix expression
     reverse(exp);
     strcpy(prefix,exp);
     return strlen(exp);

@@ -75,7 +75,7 @@ int main(){
 
     // drawing the tree
 
-    printf("\nDo you want to print the tree (not recommended for height > 6 , current height: %d)? (experimental) (y/n): ",h);
+    printf("\nDo you want to print the tree (not recommended for height > 4 , current height: %d)? (experimental) (y/n): ",h);
     char choice;
     scanf("%c",&choice);
     if (choice == 'y' || choice == 'Y')
