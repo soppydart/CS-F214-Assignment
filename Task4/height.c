@@ -12,9 +12,6 @@
 #include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of height() function
- *
- *  Put profiled data here
- *
  * @return Height of binary parse tree with root at @a temp
  */
 int height(node * temp)

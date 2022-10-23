@@ -101,7 +101,7 @@ int priority(char ch)
 }
 
 /** @brief Definition of getPostfix() function
- * @return Returns a priority value depending on the operator.
+ * 
  */
 // getPostfix function to convert an infix expression to a postfix expression
 int getPostfix(char* expression, char * stack, int lenInfix) 
@@ -132,15 +132,16 @@ int getPostfix(char* expression, char * stack, int lenInfix)
 
     } 
 
-    // Once all inital expression characters are traversed
-    // adding all left elements from stack to exp
-    while (!isEmpty(stack)) 
-        expression[++j] = pop(stack); 
+    // Once all inital expression characters are traversed, add all remaining elements to exp from stack
+    while (!isEmpty(stack)) expression[++j] = pop(stack); 
 
     expression[++j] = '\0'; 
     
 }
 
+/** @brief Definition of reverse() function
+ * @return Void
+ */
 // a function to reverse a string
 void reverse(char *exp){
 
@@ -158,6 +159,9 @@ void reverse(char *exp){
     strcpy(exp,temp);
 }
 
+/** @brief Definition of brackets() function
+ * @return Void
+ */
 // a function to swap brackets
 void brackets(char* exp){
     int i = 0;
@@ -174,8 +178,7 @@ void brackets(char* exp){
 // the function to convert the infix expression into a prefix expression
 
 /** @brief Definition of infixToPrefix() function
- *
- *  Put profiled data here
+ *  @return The length of the infix expression
  */
 int infixToPrefix(char *exp, char * stack, char * prefix, int lenInfix)
 {
