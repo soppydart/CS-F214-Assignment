@@ -3,10 +3,12 @@
     
     Contains declaration for infixToPrefix()
 */
-/*! \fn  int infixToPrefix(char * infix, char * prefix)
-    \brief Reads \a infix and converts it to prefix which is written to \a prefix. 
+/*! \fn  int infixToPrefix(char * infix, char * stack, char * prefix, int lenInfix)
+    \brief Reads \a infix and generates it's prefix which is written to \a prefix . 
     \param infix The input string of infix expression
-    \param prefix The output string which is the prefix expression
+    \param stack The stack for in-function operations
+    \param prefix The output string
+    \param lenInfix Length of the infix expression
     \return Returns length of \a prefix.
 */
-int infixToPrefix(char * infix, char * prefix);
+int infixToPrefix(char * infix, char * stack, char * prefix, int lenInfix);
