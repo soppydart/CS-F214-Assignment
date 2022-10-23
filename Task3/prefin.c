@@ -10,7 +10,7 @@
 #include <stdio.h> /* for referencing to printf() and NULL */
 
 /* node includes */
-#include "../Miscellaneous/node.h" /* to use node Struct */
+#include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of prefin() function
  *
@@ -20,17 +20,17 @@
  */
 void prefin(node * temp)
 {
-    if (!( temp->left!=NULL && temp->right==NULL)){
+    if (!(temp->left!=NULL && temp->right==NULL)){
 
-        // temp has two child leaves so it's atom is not ~ operator
+        // temp has two child leaves so its atom is not ~ operator
 
         if (temp->left!=NULL){
             printf("(");
-            prefin(temp->left);     //print infix of left branch
+            prefin(temp->left);     // print the infix expression of left branch
         }
         printf("%c",temp->atom);    // print current root's atom value
         if (temp->right!=NULL){
-            prefin(temp->right);    //print infix of right branch
+            prefin(temp->right);    // print the infix expression of right branch
             printf(")");
         }
     }
@@ -42,7 +42,7 @@ void prefin(node * temp)
         printf("%c",temp->atom);
         if (temp->left!=NULL){
             printf("(");
-            prefin(temp->left);     // print infix of left branch
+            prefin(temp->left);     // print the infix expression of left branch
             printf(")");
         }
         printf(")");

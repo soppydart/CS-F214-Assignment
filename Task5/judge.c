@@ -10,7 +10,7 @@
 #include <stdio.h> /* for referencing to NULL, printf() and scanf() */
 
 /* node includes */
-#include "../Miscellaneous/node.h" /* for using node Struct */
+#include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of judge() function
  *
