@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['freee_0',['freee',['../freee_8c.html#ad5f7927c5523349fb6f184f67e931b67',1,'freee(node *temp):&#160;freee.c'],['../freee_8h.html#ad5f7927c5523349fb6f184f67e931b67',1,'freee(node *temp):&#160;freee.c']]]
+  ['draw_0',['draw',['../draw_8c.html#afeb6c2171de1e97604586fea3ef2a706',1,'draw(node *temp, int height):&#160;draw.c'],['../draw_8h.html#afeb6c2171de1e97604586fea3ef2a706',1,'draw(node *temp, int height):&#160;draw.c']]]
 ];

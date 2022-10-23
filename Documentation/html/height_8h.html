@@ -115,7 +115,6 @@ Functions</h2></td></tr>
 
 <p>Definition of <a class="el" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15" title="Definition of height() function.">height()</a> function. </p>
 <p >Returns height of binary tree with root at <em>temp</em>.</p>
-<p >Put profiled data here</p>
 <dl class="section return"><dt>Returns</dt><dd>Height of binary parse tree with root at <em>temp</em> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -124,48 +123,48 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="height_8c_source.html#l00020">20</a> of file <a class="el" href="height_8c_source.html">height.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{</div>
-<div class="line"><span class="lineno">   22</span>    <span class="keywordtype">int</span> max=0,current=0,back=0; <span class="comment">// Initialize variables</span></div>
-<div class="line"><span class="lineno">   23</span>    <a class="code hl_struct" href="structnode.html">node</a> * prev=NULL;</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">while</span>(temp!=NULL){ <span class="comment">// loop terminates when temp points to NULL</span></div>
-<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">if</span>(temp-&gt;left==NULL || back == 1){</div>
-<div class="line"><span class="lineno">   26</span>            <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   27</span><span class="comment">            * temp has reached tree endpoint or it has travelled back up to the parent node</span></div>
-<div class="line"><span class="lineno">   28</span><span class="comment">            */</span></div>
-<div class="line"><span class="lineno">   29</span>            <span class="keywordflow">if</span>(temp-&gt;right==NULL || temp-&gt;right==prev){</div>
-<div class="line"><span class="lineno">   30</span>                <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   31</span><span class="comment">                * temp can&#39;t travel right so it visits parent</span></div>
-<div class="line"><span class="lineno">   32</span><span class="comment">                */</span></div>
-<div class="line"><span class="lineno">   33</span>                current--;</div>
-<div class="line"><span class="lineno">   34</span>                prev=temp;</div>
-<div class="line"><span class="lineno">   35</span>                temp = temp-&gt;parent;</div>
-<div class="line"><span class="lineno">   36</span>                back=1;</div>
-<div class="line"><span class="lineno">   37</span>            }</div>
-<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   39</span>                <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   40</span><span class="comment">                * temp travels right</span></div>
-<div class="line"><span class="lineno">   41</span><span class="comment">                */</span></div>
-<div class="line"><span class="lineno">   42</span>                current++;</div>
-<div class="line"><span class="lineno">   43</span>                prev = temp;</div>
-<div class="line"><span class="lineno">   44</span>                temp = temp-&gt;right;</div>
-<div class="line"><span class="lineno">   45</span>                back=0;</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   49</span>            <span class="comment">/*</span></div>
-<div class="line"><span class="lineno">   50</span><span class="comment">            * temp travels left</span></div>
-<div class="line"><span class="lineno">   51</span><span class="comment">            */</span></div>
-<div class="line"><span class="lineno">   52</span>            current++;</div>
-<div class="line"><span class="lineno">   53</span>            prev = temp;</div>
-<div class="line"><span class="lineno">   54</span>            temp = temp-&gt;left;</div>
-<div class="line"><span class="lineno">   55</span>            back=0;</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">if</span>(current&gt;max)</div>
-<div class="line"><span class="lineno">   58</span>            max=current; <span class="comment">// update max</span></div>
-<div class="line"><span class="lineno">   59</span>    }</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> max+1; <span class="comment">// height</span></div>
-<div class="line"><span class="lineno">   61</span>}</div>
+<p class="definition">Definition at line <a class="el" href="height_8c_source.html#l00017">17</a> of file <a class="el" href="height_8c_source.html">height.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{</div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordtype">int</span> max=0,current=0,back=0; <span class="comment">// Initialize variables</span></div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_struct" href="structnode.html">node</a> * prev=NULL;</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">while</span>(temp!=NULL){ <span class="comment">// loop terminates when temp points to NULL</span></div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span>(temp-&gt;left==NULL || back == 1){</div>
+<div class="line"><span class="lineno">   23</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   24</span><span class="comment">            * temp has reached tree endpoint or it has travelled back up to the parent node</span></div>
+<div class="line"><span class="lineno">   25</span><span class="comment">            */</span></div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span>(temp-&gt;right==NULL || temp-&gt;right==prev){</div>
+<div class="line"><span class="lineno">   27</span>                <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   28</span><span class="comment">                * temp can&#39;t travel right so it visits parent</span></div>
+<div class="line"><span class="lineno">   29</span><span class="comment">                */</span></div>
+<div class="line"><span class="lineno">   30</span>                current--;</div>
+<div class="line"><span class="lineno">   31</span>                prev=temp;</div>
+<div class="line"><span class="lineno">   32</span>                temp = temp-&gt;parent;</div>
+<div class="line"><span class="lineno">   33</span>                back=1;</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   36</span>                <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   37</span><span class="comment">                * temp travels right</span></div>
+<div class="line"><span class="lineno">   38</span><span class="comment">                */</span></div>
+<div class="line"><span class="lineno">   39</span>                current++;</div>
+<div class="line"><span class="lineno">   40</span>                prev = temp;</div>
+<div class="line"><span class="lineno">   41</span>                temp = temp-&gt;right;</div>
+<div class="line"><span class="lineno">   42</span>                back=0;</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   46</span>            <span class="comment">/*</span></div>
+<div class="line"><span class="lineno">   47</span><span class="comment">            * temp travels left</span></div>
+<div class="line"><span class="lineno">   48</span><span class="comment">            */</span></div>
+<div class="line"><span class="lineno">   49</span>            current++;</div>
+<div class="line"><span class="lineno">   50</span>            prev = temp;</div>
+<div class="line"><span class="lineno">   51</span>            temp = temp-&gt;left;</div>
+<div class="line"><span class="lineno">   52</span>            back=0;</div>
+<div class="line"><span class="lineno">   53</span>        }</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span>(current&gt;max)</div>
+<div class="line"><span class="lineno">   55</span>            max=current; <span class="comment">// update max</span></div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> max+1; <span class="comment">// height</span></div>
+<div class="line"><span class="lineno">   58</span>}</div>
 <div class="ttc" id="astructnode_html"><div class="ttname"><a href="structnode.html">node</a></div><div class="ttdoc">Structure definition for node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00015">node.h:15</a></div></div>
 </div><!-- fragment -->
 </div>

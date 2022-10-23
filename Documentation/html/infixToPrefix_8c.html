@@ -117,8 +117,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:af7637cf6869814fcb2102111b17ba4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of <a class="el" href="infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab" title="Definition of getPostfix() function.">getPostfix()</a> function.  <a href="infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab">More...</a><br /></td></tr>
 <tr class="separator:af7637cf6869814fcb2102111b17ba4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb60629bfa8355ff36df1d52d0eeb867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867">reverse</a> (char *exp)</td></tr>
+<tr class="memdesc:abb60629bfa8355ff36df1d52d0eeb867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of <a class="el" href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867" title="Definition of reverse() function.">reverse()</a> function.  <a href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867">More...</a><br /></td></tr>
 <tr class="separator:abb60629bfa8355ff36df1d52d0eeb867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a105d1bc18250addc8879dacb085d6344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="infixToPrefix_8c.html#a105d1bc18250addc8879dacb085d6344">brackets</a> (char *exp)</td></tr>
+<tr class="memdesc:a105d1bc18250addc8879dacb085d6344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of <a class="el" href="infixToPrefix_8c.html#a105d1bc18250addc8879dacb085d6344" title="Definition of brackets() function.">brackets()</a> function.  <a href="infixToPrefix_8c.html#a105d1bc18250addc8879dacb085d6344">More...</a><br /></td></tr>
 <tr class="separator:a105d1bc18250addc8879dacb085d6344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19c7f3bcadb0200f83e518a43860f549"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="infixToPrefix_8c.html#a19c7f3bcadb0200f83e518a43860f549">infixToPrefix</a> (char *exp, char *stack, char *prefix, int lenInfix)</td></tr>
 <tr class="memdesc:a19c7f3bcadb0200f83e518a43860f549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of <a class="el" href="infixToPrefix_8c.html#a19c7f3bcadb0200f83e518a43860f549" title="Definition of infixToPrefix() function.">infixToPrefix()</a> function.  <a href="infixToPrefix_8c.html#a19c7f3bcadb0200f83e518a43860f549">More...</a><br /></td></tr>
@@ -151,18 +153,21 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00162">162</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  162</span>                        {</div>
-<div class="line"><span class="lineno">  163</span>    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">while</span>(exp[i]!=<span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  165</span>    {</div>
-<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span>(exp[i]==<span class="charliteral">&#39;(&#39;</span>)</div>
-<div class="line"><span class="lineno">  167</span>            exp[i]=<span class="charliteral">&#39;)&#39;</span>;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(exp[i]==<span class="charliteral">&#39;)&#39;</span>)</div>
-<div class="line"><span class="lineno">  169</span>            exp[i]=<span class="charliteral">&#39;(&#39;</span>;</div>
-<div class="line"><span class="lineno">  170</span>        i++;</div>
-<div class="line"><span class="lineno">  171</span>    }</div>
-<div class="line"><span class="lineno">  172</span>}</div>
+<p>Definition of <a class="el" href="infixToPrefix_8c.html#a105d1bc18250addc8879dacb085d6344" title="Definition of brackets() function.">brackets()</a> function. </p>
+<dl class="section return"><dt>Returns</dt><dd>Void </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00166">166</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>                        {</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">while</span>(exp[i]!=<span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  169</span>    {</div>
+<div class="line"><span class="lineno">  170</span>        <span class="keywordflow">if</span>(exp[i]==<span class="charliteral">&#39;(&#39;</span>)</div>
+<div class="line"><span class="lineno">  171</span>            exp[i]=<span class="charliteral">&#39;)&#39;</span>;</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(exp[i]==<span class="charliteral">&#39;)&#39;</span>)</div>
+<div class="line"><span class="lineno">  173</span>            exp[i]=<span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line"><span class="lineno">  174</span>        i++;</div>
+<div class="line"><span class="lineno">  175</span>    }</div>
+<div class="line"><span class="lineno">  176</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -225,7 +230,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition of <a class="el" href="infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab" title="Definition of getPostfix() function.">getPostfix()</a> function. </p>
-<dl class="section return"><dt>Returns</dt><dd>Returns a priority value depending on the operator. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00107">107</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  108</span>{ </div>
@@ -255,14 +259,12 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  132</span> </div>
 <div class="line"><span class="lineno">  133</span>    } </div>
 <div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <span class="comment">// Once all inital expression characters are traversed</span></div>
-<div class="line"><span class="lineno">  136</span>    <span class="comment">// adding all left elements from stack to exp</span></div>
-<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="infixToPrefix_8c.html#a653c98c68c558505b75b04c44b7c838e">isEmpty</a>(stack)) </div>
-<div class="line"><span class="lineno">  138</span>        expression[++j] = <a class="code hl_function" href="infixToPrefix_8c.html#ae636d8b2c9fb2f14266470a27b591f27">pop</a>(stack); </div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>    expression[++j] = <span class="charliteral">&#39;\0&#39;</span>; </div>
-<div class="line"><span class="lineno">  141</span>    </div>
-<div class="line"><span class="lineno">  142</span>}</div>
+<div class="line"><span class="lineno">  135</span>    <span class="comment">// Once all inital expression characters are traversed, add all remaining elements to exp from stack</span></div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">while</span> (!<a class="code hl_function" href="infixToPrefix_8c.html#a653c98c68c558505b75b04c44b7c838e">isEmpty</a>(stack)) expression[++j] = <a class="code hl_function" href="infixToPrefix_8c.html#ae636d8b2c9fb2f14266470a27b591f27">pop</a>(stack); </div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    expression[++j] = <span class="charliteral">&#39;\0&#39;</span>; </div>
+<div class="line"><span class="lineno">  139</span>    </div>
+<div class="line"><span class="lineno">  140</span>}</div>
 <div class="ttc" id="ainfixToPrefix_8c_html_a04860271118e13873f24855fe077bd20"><div class="ttname"><a href="infixToPrefix_8c.html#a04860271118e13873f24855fe077bd20">push</a></div><div class="ttdeci">void push(char item, int lenInfix, char *stack)</div><div class="ttdoc">Definition of push() function.</div><div class="ttdef"><b>Definition:</b> <a href="infixToPrefix_8c_source.html#l00039">infixToPrefix.c:39</a></div></div>
 <div class="ttc" id="ainfixToPrefix_8c_html_a478eeb6b55e882be5e5f4911329e713d"><div class="ttname"><a href="infixToPrefix_8c.html#a478eeb6b55e882be5e5f4911329e713d">checkIfOperand</a></div><div class="ttdeci">int checkIfOperand(char ch)</div><div class="ttdoc">Definition of checkIfOperand() function.</div><div class="ttdef"><b>Definition:</b> <a href="infixToPrefix_8c_source.html#l00068">infixToPrefix.c:68</a></div></div>
 <div class="ttc" id="ainfixToPrefix_8c_html_a653c98c68c558505b75b04c44b7c838e"><div class="ttname"><a href="infixToPrefix_8c.html#a653c98c68c558505b75b04c44b7c838e">isEmpty</a></div><div class="ttdeci">int isEmpty()</div><div class="ttdoc">Definition of isEmpty() function.</div><div class="ttdef"><b>Definition:</b> <a href="infixToPrefix_8c_source.html#l00030">infixToPrefix.c:30</a></div></div>
@@ -312,7 +314,7 @@ Variables</h2></td></tr>
 
 <p>Definition of <a class="el" href="infixToPrefix_8c.html#a19c7f3bcadb0200f83e518a43860f549" title="Definition of infixToPrefix() function.">infixToPrefix()</a> function. </p>
 <p >Reads <em>exp</em> and generates it's prefix which is written to <em>prefix</em> .</p>
-<p >Put profiled data here</p>
+<dl class="section return"><dt>Returns</dt><dd>The length of the infix expression</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">exp</td><td>The input string of infix expression </td></tr>
@@ -324,22 +326,24 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns length of <em>prefix</em>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00180">180</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  181</span>{</div>
-<div class="line"><span class="lineno">  182</span> </div>
-<div class="line"><span class="lineno">  183</span>    <span class="keywordtype">int</span> size = strlen(exp);</div>
-<div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>    <span class="comment">// reverse string</span></div>
-<div class="line"><span class="lineno">  186</span>    reverse(exp);</div>
-<div class="line"><span class="lineno">  187</span>    <span class="comment">// swap brackets</span></div>
-<div class="line"><span class="lineno">  188</span>    brackets(exp);</div>
-<div class="line"><span class="lineno">  189</span>    <span class="comment">// get the postfix expression </span></div>
-<div class="line"><span class="lineno">  190</span>    <a class="code hl_function" href="infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab">getPostfix</a>(exp,stack,lenInfix);</div>
-<div class="line"><span class="lineno">  191</span>    <span class="comment">// reverse the string again to get the prefix expression</span></div>
-<div class="line"><span class="lineno">  192</span>    reverse(exp);</div>
-<div class="line"><span class="lineno">  193</span>    strcpy(prefix,exp);</div>
-<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">return</span> strlen(exp);</div>
-<div class="line"><span class="lineno">  195</span>}</div>
+<p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00183">183</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>{</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordtype">int</span> size = strlen(exp);</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>    <span class="comment">// reverse string</span></div>
+<div class="line"><span class="lineno">  189</span>    <a class="code hl_function" href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867">reverse</a>(exp);</div>
+<div class="line"><span class="lineno">  190</span>    <span class="comment">// swap brackets</span></div>
+<div class="line"><span class="lineno">  191</span>    <a class="code hl_function" href="infixToPrefix_8c.html#a105d1bc18250addc8879dacb085d6344">brackets</a>(exp);</div>
+<div class="line"><span class="lineno">  192</span>    <span class="comment">// get the postfix expression </span></div>
+<div class="line"><span class="lineno">  193</span>    <a class="code hl_function" href="infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab">getPostfix</a>(exp,stack,lenInfix);</div>
+<div class="line"><span class="lineno">  194</span>    <span class="comment">// reverse the string again to get the prefix expression</span></div>
+<div class="line"><span class="lineno">  195</span>    <a class="code hl_function" href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867">reverse</a>(exp);</div>
+<div class="line"><span class="lineno">  196</span>    strcpy(prefix,exp);</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">return</span> strlen(exp);</div>
+<div class="line"><span class="lineno">  198</span>}</div>
+<div class="ttc" id="ainfixToPrefix_8c_html_a105d1bc18250addc8879dacb085d6344"><div class="ttname"><a href="infixToPrefix_8c.html#a105d1bc18250addc8879dacb085d6344">brackets</a></div><div class="ttdeci">void brackets(char *exp)</div><div class="ttdoc">Definition of brackets() function.</div><div class="ttdef"><b>Definition:</b> <a href="infixToPrefix_8c_source.html#l00166">infixToPrefix.c:166</a></div></div>
+<div class="ttc" id="ainfixToPrefix_8c_html_abb60629bfa8355ff36df1d52d0eeb867"><div class="ttname"><a href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867">reverse</a></div><div class="ttdeci">void reverse(char *exp)</div><div class="ttdoc">Definition of reverse() function.</div><div class="ttdef"><b>Definition:</b> <a href="infixToPrefix_8c_source.html#l00146">infixToPrefix.c:146</a></div></div>
 <div class="ttc" id="ainfixToPrefix_8c_html_af7637cf6869814fcb2102111b17ba4ab"><div class="ttname"><a href="infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab">getPostfix</a></div><div class="ttdeci">int getPostfix(char *expression, char *stack, int lenInfix)</div><div class="ttdoc">Definition of getPostfix() function.</div><div class="ttdef"><b>Definition:</b> <a href="infixToPrefix_8c_source.html#l00107">infixToPrefix.c:107</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -562,22 +566,25 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00145">145</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>                       {</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordtype">int</span> size = strlen(exp);</div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordtype">int</span> j = size, i=0;</div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordtype">char</span> temp[size];</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>    temp[j--]=<span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">while</span>(exp[i]!=<span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  153</span>    {</div>
-<div class="line"><span class="lineno">  154</span>        temp[j] = exp[i];</div>
-<div class="line"><span class="lineno">  155</span>        j--;</div>
-<div class="line"><span class="lineno">  156</span>        i++;</div>
-<div class="line"><span class="lineno">  157</span>    }</div>
-<div class="line"><span class="lineno">  158</span>    strcpy(exp,temp);</div>
-<div class="line"><span class="lineno">  159</span>}</div>
+<p>Definition of <a class="el" href="infixToPrefix_8c.html#abb60629bfa8355ff36df1d52d0eeb867" title="Definition of reverse() function.">reverse()</a> function. </p>
+<dl class="section return"><dt>Returns</dt><dd>Void </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="infixToPrefix_8c_source.html#l00146">146</a> of file <a class="el" href="infixToPrefix_8c_source.html">infixToPrefix.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                       {</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordtype">int</span> size = strlen(exp);</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordtype">int</span> j = size, i=0;</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordtype">char</span> temp[size];</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    temp[j--]=<span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">while</span>(exp[i]!=<span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  154</span>    {</div>
+<div class="line"><span class="lineno">  155</span>        temp[j] = exp[i];</div>
+<div class="line"><span class="lineno">  156</span>        j--;</div>
+<div class="line"><span class="lineno">  157</span>        i++;</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="line"><span class="lineno">  159</span>    strcpy(exp,temp);</div>
+<div class="line"><span class="lineno">  160</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

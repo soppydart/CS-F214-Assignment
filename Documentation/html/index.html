@@ -73,18 +73,69 @@ $(function() {
   <div class="headertitle"><div class="title">CS-F214 Assignment-1 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="section author"><dt>Authors</dt><dd>Saksham Attri 2021A7PS2950H, Pranav Dinesh Sharma 2021A7PS2818H, Pritam Basu 2021A7PS20212175H</dd></dl>
-<p>Enter requirements, how to run it, difficulties faced, major bugs etc.</p>
-<p >Requirements:</p><ul>
+<div class="textblock"><dl class="section author"><dt>Authors</dt><dd>Saksham Attri 2021A7PS2950H, Pranav Dinesh Sharma 2021A7PS2818H, Pritam Basu 2021A7PS2175H</dd></dl>
+<p>Requirements:</p><ul>
 <li>GCC to compile the C code</li>
 <li>GNU Make</li>
 </ul>
-<p >Instructions to Run: Use the make command</p>
+<p >Instructions to Run: Extract the archive and use the make command in the directory</p>
 <p >Problems we faced and Bugs:</p><ul>
 <li>If a propositional atom is repeated in the propositional logic formula, the truth value needs to be entered for each time it appears in the formula.</li>
 <li>The tree that is drawn is problematic for larger heights.</li>
 <li>We struggled with cases where the negation operator was involved in the logical formula since it is a unary operator, unlike the other logical operators which are binary, but we were able to overcome this by having separate cases for it.</li>
 <li>We did not encounter any memory leaks, but almost did not account for them till the very end.</li>
+</ul>
+<p >Code Analysis:</p><ul>
+<li>C was our language of choice.</li>
+<li>We used structs to make nodes for our trees.</li>
+<li>We largely used recursive logic to realize our ideas.</li>
+</ul>
+<p >Profiling:</p><ul>
+<li>We used Gprof as our profiler.</li>
+<li>Here are the statistics for the tests that we ran for the complete program: <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Number of Characters   </th><th class="markdownTableHeadNone">Time (in seconds)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1,021   </td><td class="markdownTableBodyNone">0    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">8,188   </td><td class="markdownTableBodyNone">0    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">262,141   </td><td class="markdownTableBodyNone">0.01    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2,097,149   </td><td class="markdownTableBodyNone">0.04    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">134,217,725   </td><td class="markdownTableBodyNone">4.93   </td></tr>
+</table>
+</li>
+</ul>
+<p >Specifications:</p><ul>
+<li>Architecture: x86_64</li>
+<li>CPU op-mode(s): 32-bit, 64-bit</li>
+<li>Address sizes: 39 bits physical, 48 bits virtual</li>
+<li>Byte Order: Little Endian</li>
+<li>CPU(s): 8</li>
+<li>On-line CPU(s) list: 0-7</li>
+<li>Vendor ID: GenuineIntel</li>
+<li>Model name: Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz</li>
+<li>CPU family: 6</li>
+<li>Model: 126</li>
+<li>Thread(s) per core: 2</li>
+<li>Core(s) per socket: 4</li>
+<li>Socket(s): 1</li>
+<li>Stepping: 5</li>
+<li>CPU max MHz: 3600.0000</li>
+<li>CPU min MHz: 400.0000</li>
+<li>BogoMIPS: 2380.80</li>
+<li>Virtualization: VT-x</li>
+<li>Caches (sum of all): <br  />
+<ul>
+<li>L1d: 192 KiB (4 instances)</li>
+<li>L1i: 128 KiB (4 instances)</li>
+<li>L2: 2 MiB (4 instances)</li>
+<li>L3: 6 MiB (1 instance)</li>
+</ul>
+</li>
+<li>RAM: 20 GiB</li>
 </ul>
 <p >We found the assignment really engaging and it was really fun to work in a team environment. This assignment also helped deepen our insight into theoretical concepts behind propositional logic. We thank all our instructors for providing us this oppurtunity. </p>
 </div></div><!-- PageDoc -->

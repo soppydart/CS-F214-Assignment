@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['judge_0',['judge',['../judge_8c.html#ac291604e53bd9b9fff8cdb29b1f2c417',1,'judge(node *temp):&#160;judge.c'],['../judge_8h.html#ac291604e53bd9b9fff8cdb29b1f2c417',1,'judge(node *temp):&#160;judge.c']]]
+  ['infixtoprefix_0',['infixToPrefix',['../infixToPrefix_8c.html#a19c7f3bcadb0200f83e518a43860f549',1,'infixToPrefix(char *exp, char *stack, char *prefix, int lenInfix):&#160;infixToPrefix.c'],['../infixToPrefix_8h.html#a19c7f3bcadb0200f83e518a43860f549',1,'infixToPrefix(char *exp, char *stack, char *prefix, int lenInfix):&#160;infixToPrefix.c']]],
+  ['isempty_1',['isEmpty',['../infixToPrefix_8c.html#a653c98c68c558505b75b04c44b7c838e',1,'infixToPrefix.c']]],
+  ['isfull_2',['isFull',['../infixToPrefix_8c.html#a234616ffb4f8d0cce15f997dfd214875',1,'infixToPrefix.c']]]
 ];

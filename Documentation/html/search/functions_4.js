@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height_0',['height',['../height_8c.html#ae3c058f8431dfba4087b8806057f3d15',1,'height(node *temp):&#160;height.c'],['../height_8h.html#ae3c058f8431dfba4087b8806057f3d15',1,'height(node *temp):&#160;height.c']]]
+  ['getpostfix_0',['getPostfix',['../infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab',1,'infixToPrefix.c']]]
 ];

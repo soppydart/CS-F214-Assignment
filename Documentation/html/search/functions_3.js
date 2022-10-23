@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getpostfix_0',['getPostfix',['../infixToPrefix_8c.html#af7637cf6869814fcb2102111b17ba4ab',1,'infixToPrefix.c']]]
+  ['freee_0',['freee',['../freee_8c.html#ad5f7927c5523349fb6f184f67e931b67',1,'freee(node *temp):&#160;freee.c'],['../freee_8h.html#ad5f7927c5523349fb6f184f67e931b67',1,'freee(node *temp):&#160;freee.c']]]
 ];
