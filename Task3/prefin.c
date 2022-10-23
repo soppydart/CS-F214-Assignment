@@ -12,9 +12,6 @@
 #include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of prefin() function
- *
- *  Put profiled data here
- *
  * @return Void
  */
 void prefin(node * temp)

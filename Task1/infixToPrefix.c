@@ -15,18 +15,27 @@
 int top = -1;
 
 // checking if the stack is full
+/** @brief Definition of isFull() function
+ * @return Whether or not the stack is full
+ */
 int isFull(int lenInfix) {
     if(top == lenInfix - 1) return 1;
     else return 0;
 } 
 
 // checking if the stack is empty
+/** @brief Definition of isEmpty() function
+ * @return Whether or not the stack is empty
+ */
 int isEmpty() {
     if(top == -1) return 1;
     else return 0; 
 }
 
 // push function which inserts value in the stack and increments top
+/** @brief Definition of push() function
+ * @return Void
+ */
 void push(char item,int lenInfix,char * stack) {
     if (isFull(lenInfix)) return; 
 	top++;
@@ -34,6 +43,9 @@ void push(char item,int lenInfix,char * stack) {
 }
 
 // pop function which removes an item from the stack and decrements top 
+/** @brief Definition of pop() function
+ * @return Pops the uppermost element of the stack if it is not empty
+ */
 int pop(char * stack) { 
     if (isEmpty()) return INT_MIN; 
         
@@ -41,31 +53,39 @@ int pop(char * stack) {
     return stack[top--]; 
 } 
 
-// peek function to return the top of the stack 
+/** @brief Definition of peek() function
+ * @return Returns the topmost element of the stack if it is not empty
+ */
 int peek(char * stack){ 
     if (isEmpty()) return INT_MIN; 
-    return stack[top]; 
+    return stack[top];
 } 
 
+/** @brief Definition of checkIfOperand() function
+ * @return Whether or not the character is a propositional atom
+ */
 // a function to check if the given character is a propositional atom 
 int checkIfOperand(char ch) {
     return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
 } 
 
+/** @brief Definition of priority() function
+ * @return Returns a priority value depending on the operator.
+ */
 // priority function to compare priority. It returns a larger value for a higher priority operator   
 int priority(char ch) 
 { 
     switch(ch) {
-		case '+':
-		return 3;
+        case '~':        
+		return 5;
 		break;
 
-		case '*':    
+        case '*':    
 		return 4;
 		break;
 
-		case '~':        
-		return 5;
+		case '+':
+		return 3;
 		break;
 
         case '>':
@@ -80,6 +100,9 @@ int priority(char ch)
     return -1; 
 }
 
+/** @brief Definition of getPostfix() function
+ * @return Returns a priority value depending on the operator.
+ */
 // getPostfix function to convert an infix expression to a postfix expression
 int getPostfix(char* expression, char * stack, int lenInfix) 
 { 

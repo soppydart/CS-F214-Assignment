@@ -1,6 +1,5 @@
 /** @file judge.c
  *  @brief Contains definition for judge()
- *  @author Saksham Attri
  *  @bug For the same atom used in different places, user has to enter it's truth value every time
  */
 
@@ -13,11 +12,7 @@
 #include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of judge() function
- *
- *  When asked for input, enter 0 for false, 1 for true
- * 
- *  Enter profiling data here
- *
+ *  When asked for input, enter 1 for true, 0 for false
  * @return 1 if true, 0 if false
  */
 int judge(node * temp)

@@ -13,9 +13,6 @@
 #include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of parser() function
- *
- *  Put profiled data here
- *
  * @return 1
  */
 int parser(node * temp, char * prefixstr, int len)
