@@ -11,7 +11,7 @@
 #include <stdlib.h> /* for using calloc() */
 
 /* node includes */
-#include "../Miscellaneous/node.h" /* for using node Struct */
+#include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of parser() function
  *
@@ -25,7 +25,7 @@ int parser(node * temp, char * prefixstr, int len)
         len--;
         if(temp->atom!=0){
 
-            // the node has been occupied already
+            // If the node has been occupied already
 
             if (temp->right==NULL)
                 parser(temp->parent,prefixstr,len+1);
@@ -36,21 +36,21 @@ int parser(node * temp, char * prefixstr, int len)
         }
         else{
 
-            // data allocation for the new node
+            // Data allocation for the new node
 
             temp->atom = *prefixstr;
             if ( *prefixstr=='*' || *prefixstr == '+' || *prefixstr == '>'){
 
-                // creating two child nodes
+                // Creating two child nodes
 
                 temp->left = (node *) calloc(1,sizeof(node));
                 temp->right = (node *) calloc(1,sizeof(node));
 
-                //parent for child nodes points back to temp
+                //Parent for child nodes points back to temp
 
                 temp->left->parent = temp;
                 temp->right->parent = temp;
-                parser(temp->left,prefixstr+1,len); //recursing on left child
+                parser(temp->left,prefixstr+1,len); //Recursing on left child
             }
             else if (*prefixstr == '~'){
 
@@ -59,19 +59,19 @@ int parser(node * temp, char * prefixstr, int len)
                 temp->left = (node *) calloc(1,sizeof(node));
                 temp->right = NULL;
 
-                //parent for child node points back to temp
+                //Parent for child node points back to temp
 
                 temp->left->parent = temp;
-                parser(temp->left,prefixstr+1,len); //recursing on left child
+                parser(temp->left,prefixstr+1,len); //Recursing on left child
             }
             else{
 
-                // a non operator atom has no children
+                // A non-operator atom has no children
 
                 temp->left=NULL;
                 temp->right=NULL;
 
-                // recurse on the parent atom 
+                // Recurse on the parent atom 
                 
                 parser(temp->parent,prefixstr+1,len);
             }

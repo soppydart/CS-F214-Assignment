@@ -10,7 +10,7 @@
 #include <stdio.h> /* for referencing to NULL */
 
 /* node includes */
-#include "../Miscellaneous/node.h" /* for using node Struct */
+#include "../Miscellaneous/node.h" /* for using the node struct */
 
 /** @brief Definition of height() function
  *
@@ -20,9 +20,9 @@
  */
 int height(node * temp)
 {
-    int max=0,current=0,back=0; //Initialize variables
+    int max=0,current=0,back=0; // Initialize variables
     node * prev=NULL;
-    while(temp!=NULL){ //loop terminates when temp points to NULL
+    while(temp!=NULL){ // loop terminates when temp points to NULL
         if(temp->left==NULL || back == 1){
             /*
             * temp has reached tree endpoint or it has travelled back up to the parent node
@@ -58,5 +58,5 @@ int height(node * temp)
         if(current>max)
             max=current; // update max
     }
-    return max+1; //height
+    return max+1; // height
 }
