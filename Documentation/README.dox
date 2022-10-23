@@ -9,7 +9,7 @@ Requirements:
  - GCC to compile the C code
  - GNU Make 
 
-Instructions to Run: Decompress and use the make command
+Instructions to Run: Extract the archive and use the make command in the directory
 
 Problems we faced and Bugs:
  - If a propositional atom is repeated in the propositional logic formula, the truth value needs to be entered for each time it appears in the formula.
@@ -18,17 +18,48 @@ Problems we faced and Bugs:
  - We did not encounter any memory leaks, but almost did not account for them till the very end.
 
 Code Analysis:
+ - C was our language of choice.
  - We used structs to make nodes for our trees.
  - We largely used recursive logic to realize our ideas.
 
 
 Profiling:
  - We used Gprof as our profiler.
- - Task 1:
-   - Unfortunately, for logical formulas with a relatively small number of characters, the profiler indicated very low times to run (zero seconds).
-   - With 16,777,212 characters, it took 0.27 seconds in all.
-   - With 67,108,860 characters, it took 1.07 seconds in all.
-   - And with 134,217,724 characters, it took 2.16 seconds in all.
+ - Here are the statistics for the tests that we ran for the complete program:
+  Number of Characters     | Time (in seconds)
+   --------------------    | -----------------
+   1,021                   | 0
+   8,188                   | 0
+   262,141                 | 0.01
+   2,097,149               | 0.04
+   134,217,725             | 4.93
+
+
+Specifications:
+- Architecture:            x86_64
+- CPU op-mode(s):          32-bit, 64-bit
+- Address sizes:           39 bits physical, 48 bits virtual
+- Byte Order:              Little Endian
+- CPU(s):                  8
+- On-line CPU(s) list:     0-7
+- Vendor ID:               GenuineIntel
+- Model name:              Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz
+- CPU family:              6
+- Model:                   126
+- Thread(s) per core:      2
+- Core(s) per socket:      4
+- Socket(s):               1
+- Stepping:                5
+- CPU max MHz:             3600.0000
+- CPU min MHz:             400.0000
+- BogoMIPS:                2380.80
+- Virtualization:          VT-x
+- Caches (sum of all):    
+  - L1d:                   192 KiB (4 instances)
+  - L1i:                   128 KiB (4 instances)
+  - L2:                    2 MiB (4 instances)
+  - L3:                    6 MiB (1 instance)
+- RAM:                     20 GiB
 
 We found the assignment really engaging and it was really fun to work in a team environment.
 This assignment also helped deepen our insight into theoretical concepts behind propositional logic.
