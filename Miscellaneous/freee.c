@@ -12,7 +12,7 @@
 
 int freee(node * temp){
     if (temp->left==NULL && temp->right==NULL){
-        free(temp); // frees the node if it has no children
+        freee(temp); // frees the node if it has no children
     }
     else{
         if(temp->left!=NULL && temp->right==NULL){
