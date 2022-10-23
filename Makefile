@@ -1,7 +1,7 @@
 # -*- Makefile -*-
 
-exec: main.o infixToPrefix.o draw.o parser.o prefin.o height.o judge.o
-	gcc -o exec main.o infixToPrefix.o draw.o parser.o prefin.o height.o judge.o -lm
+exec: main.o infixToPrefix.o draw.o parser.o prefin.o height.o judge.o freee.o
+	gcc -o exec main.o infixToPrefix.o draw.o parser.o prefin.o height.o judge.o freee.o -lm
 	./exec
 
 main.o: main.c Task1/infixToPrefix.h Miscellaneous/node.h Miscellaneous/draw.h Task2/parser.h Task3/prefin.h Task4/height.h Task5/judge.h 
@@ -24,6 +24,9 @@ height.o: Miscellaneous/node.h Task4/height.h Task4/height.c
 
 judge.o: Miscellaneous/node.h Task5/judge.h Task5/judge.c
 	gcc -c Task5/judge.c -o judge.o
+
+freee.o: Miscellaneous/node.h Miscellaneous/freee.h Miscellaneous/freee.c
+	gcc -c Miscellaneous/freee.c -o freee.o
 
 clean:
 	rm *.o

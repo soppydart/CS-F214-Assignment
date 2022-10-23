@@ -19,6 +19,7 @@
 #include "Task3/prefin.h"
 #include "Task4/height.h"
 #include "Task5/judge.h"
+#include "Miscellaneous/freee.h"
 
 /** @brief Declaration and Definition of main() function
  *
@@ -58,7 +59,7 @@ int main(){
     char prefix[lenInfix];  // creating buffer to store prefix
     char stack[lenInfix];
     int lenPrefix = infixToPrefix(infix,stack,prefix,lenInfix);
-    printf("The prefix form of above input is : %s",prefix);
+    printf("\nThe prefix form of above input is : %s",prefix);
 
     // creating root for binary tree
 
@@ -67,7 +68,7 @@ int main(){
 
     // generating the parse tree
 
-    printf("\nMaking the parse tree ...\n");
+    printf("\n\nMaking the parse tree ...\n");
     if(parser(root,prefix,lenPrefix))
         printf("\n Tree was made \n");
 
@@ -83,12 +84,12 @@ int main(){
 
     // converting prefix back to infix by in-order traversal
 
-    printf("\nConverting prefix back to infix by in-order traversal ... \n");
+    printf("\nConverting prefix back to infix by in-order traversal ... \n\nInfix expression: ");
     prefin(root);
 
     // printing height of tree
 
-    printf("\nHeight of the parse tree is %d units !\n",h);
+    printf("\n\nHeight of the parse tree is %d units !\n",h);
 
     // evaluating truth value of the proposition 
 
@@ -99,6 +100,12 @@ int main(){
     else{
         printf("\n        proposition false, done doggo a sad\n                \\ \n                 \\ \n                /^-----^\\ \n                V  o o  V\n                 |  Y  |\n                  \\ ⌓ /\n                  / - \\ \n                  |    \\ \n                  |     \\     ) \n                  || (___\\====\n");
     }
+
+    // free memory
+
+    free(infix);
+    freee(root);
+    printf("\n*** Memory freed ***\n");
 
     // option to run the code again for a new input
 
