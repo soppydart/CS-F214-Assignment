@@ -74,23 +74,46 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="section author"><dt>Authors</dt><dd>Saksham Attri 2021A7PS2950H, Pranav Dinesh Sharma 2021A7PS2818H, Pritam Basu 2021A7PS2175H</dd></dl>
-<p>Requirements:</p><ul>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Requirements:</h2>
+<ul>
 <li>GCC to compile the C code</li>
 <li>GNU Make</li>
 </ul>
-<p >Instructions to Run: Extract the archive and use the make command in the directory</p>
-<p >Problems we faced and Bugs:</p><ul>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Instructions to run</h2>
+<p >Download and extract the repo to <code>&lt;some-directory&gt;</code> Run (for the first time) with : </p><div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><p> For subsequent runs, use : </p><div class="fragment"><div class="line">./exec</div>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md2"></a>
+If running without GNU Make</h3>
+<p >Run the following in <code>&lt;some-directory&gt;</code>: </p><div class="fragment"><div class="line">gcc -c main.c -o main.o</div>
+<div class="line">gcc -c Task1/infixToPrefix.c -o infixToPrefix.o</div>
+<div class="line">gcc -c Miscellaneous/draw.c -o draw.o</div>
+<div class="line">gcc -c Task2/parser.c -o parser.o</div>
+<div class="line">gcc -c Task3/prefin.c -o prefin.o</div>
+<div class="line">gcc -c Task4/height.c -o height.o</div>
+<div class="line">gcc -c Task5/judge.c -o judge.o</div>
+<div class="line">gcc -c Miscellaneous/freee.c -o freee.o</div>
+<div class="line">gcc -o exec main.o infixToPrefix.o draw.o parser.o prefin.o height.o judge.o freee.o -lm</div>
+<div class="line">./exec</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+Problems we faced and Bugs:</h2>
+<ul>
 <li>If a propositional atom is repeated in the propositional logic formula, the truth value needs to be entered for each time it appears in the formula.</li>
 <li>The tree that is drawn is problematic for larger heights.</li>
 <li>We struggled with cases where the negation operator was involved in the logical formula since it is a unary operator, unlike the other logical operators which are binary, but we were able to overcome this by having separate cases for it.</li>
 <li>We did not encounter any memory leaks, but almost did not account for them till the very end.</li>
 </ul>
-<p >Code Analysis:</p><ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Code Analysis:</h2>
+<ul>
 <li>C was our language of choice.</li>
 <li>We used structs to make nodes for our trees.</li>
 <li>We largely used recursive logic to realize our ideas.</li>
 </ul>
-<p >Profiling:</p><ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Profiling:</h2>
+<ul>
 <li>We used Gprof as our profiler.</li>
 <li>Here are the statistics for the tests that we ran for the complete program: <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -108,7 +131,9 @@ $(function() {
 </table>
 </li>
 </ul>
-<p >Specifications:</p><ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Specifications:</h2>
+<ul>
 <li>Architecture: x86_64</li>
 <li>CPU op-mode(s): 32-bit, 64-bit</li>
 <li>Address sizes: 39 bits physical, 48 bits virtual</li>
