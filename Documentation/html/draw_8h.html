@@ -126,7 +126,6 @@ Functions</h2></td></tr>
 <p>Definition of <a class="el" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15" title="Definition of height() function.">height()</a> function. </p>
 <p >Draws on terminal, a binary rooted parse tree, with root at <em>temp</em> , and height <em>height</em>.</p>
 <p >This function is experimental</p>
-<p >Put profiled data here</p>
 <dl class="section return"><dt>Returns</dt><dd>1</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -136,161 +135,161 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="draw_8c_source.html#l00023">23</a> of file <a class="el" href="draw_8c_source.html">draw.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordtype">int</span> rows,cols=150;          <span class="comment">// setting up total printable area</span></div>
-<div class="line"><span class="lineno">   26</span>    <span class="keywordtype">float</span> div;                  <span class="comment">// length of child branch = length of parent / div</span></div>
+<p class="definition">Definition at line <a class="el" href="draw_8c_source.html#l00021">21</a> of file <a class="el" href="draw_8c_source.html">draw.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordtype">int</span> rows,cols=150;          <span class="comment">// setting up total printable area</span></div>
+<div class="line"><span class="lineno">   24</span>    <span class="keywordtype">float</span> div;                  <span class="comment">// length of child branch = length of parent / div</span></div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    <span class="comment">// attempt to get better outputss for different heights</span></div>
 <div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>    <span class="comment">// attempt to get better outputss for different heights</span></div>
-<div class="line"><span class="lineno">   29</span> </div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt;= 4)</div>
-<div class="line"><span class="lineno">   31</span>        div = 2;</div>
-<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt;= 6)</div>
-<div class="line"><span class="lineno">   33</span>        div = 1.5;</div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt; 9)</div>
-<div class="line"><span class="lineno">   35</span>        div = 1.25;</div>
-<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt; 15)</div>
-<div class="line"><span class="lineno">   37</span>        div = 1.125;</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt; 30)</div>
-<div class="line"><span class="lineno">   39</span>        div = 1.075;</div>
-<div class="line"><span class="lineno">   40</span>    rows=5*(<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a>);</div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">char</span> canvas[rows][cols];    <span class="comment">// create 2D array that serves as buffer for the output</span></div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt;= 4)</div>
+<div class="line"><span class="lineno">   29</span>        div = 2;</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt;= 6)</div>
+<div class="line"><span class="lineno">   31</span>        div = 1.5;</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt; 9)</div>
+<div class="line"><span class="lineno">   33</span>        div = 1.25;</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt; 15)</div>
+<div class="line"><span class="lineno">   35</span>        div = 1.125;</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a> &lt; 30)</div>
+<div class="line"><span class="lineno">   37</span>        div = 1.075;</div>
+<div class="line"><span class="lineno">   38</span>    rows=5*(<a class="code hl_function" href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a>);</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordtype">char</span> canvas[rows][cols];    <span class="comment">// create 2D array that serves as buffer for the output</span></div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">// fill all canvas with whitespaces</span></div>
 <div class="line"><span class="lineno">   42</span> </div>
-<div class="line"><span class="lineno">   43</span>    <span class="comment">// fill all canvas with whitespaces</span></div>
-<div class="line"><span class="lineno">   44</span> </div>
-<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;rows;i++){</div>
-<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;cols;j++){</div>
-<div class="line"><span class="lineno">   47</span>            canvas[i][j]=<span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;rows;i++){</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;cols;j++){</div>
+<div class="line"><span class="lineno">   45</span>            canvas[i][j]=<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// drawing logic loop</span></div>
 <div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    <span class="comment">// drawing logic loop</span></div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>    <a class="code hl_struct" href="structnode.html">node</a> * prev=NULL;</div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordtype">int</span> x=0,y=cols/2,px=0,py=cols/2,level=0,back=0,diff=0;</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">while</span>(temp!=NULL){</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">if</span>(back){</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_struct" href="structnode.html">node</a> * prev=NULL;</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordtype">int</span> x=0,y=cols/2,px=0,py=cols/2,level=0,back=0,diff=0;</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">while</span>(temp!=NULL){</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">if</span>(back){</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>            <span class="comment">// this node has already been added to canvas</span></div>
 <div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>            <span class="comment">// this node has already been added to canvas</span></div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span>(temp-&gt;right==prev || temp-&gt;right==NULL){</div>
 <div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span>(temp-&gt;right==prev || temp-&gt;right==NULL){</div>
+<div class="line"><span class="lineno">   60</span>                <span class="comment">// right child node has already been added to canvas or there isn&#39;t any </span></div>
 <div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>                <span class="comment">// right child node has already been added to canvas or there isn&#39;t any </span></div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>                prev=temp;</div>
-<div class="line"><span class="lineno">   65</span>                temp=temp-&gt;parent;</div>
-<div class="line"><span class="lineno">   66</span>                level--;</div>
-<div class="line"><span class="lineno">   67</span>                x=px;</div>
-<div class="line"><span class="lineno">   68</span>                y=py;</div>
-<div class="line"><span class="lineno">   69</span>                px-=4;</div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">if</span>(canvas[x][y-1]==<span class="charliteral">&#39; &#39;</span>){                    <span class="comment">// node is left oriented </span></div>
-<div class="line"><span class="lineno">   71</span>                    py+=(cols/2)/(2*(pow(div,level)))+1;</div>
-<div class="line"><span class="lineno">   72</span>                }</div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">else</span>                                        <span class="comment">// node is right oriented</span></div>
-<div class="line"><span class="lineno">   74</span>                    py-=(cols/2)/(2*(pow(div,level)))+1;    </div>
-<div class="line"><span class="lineno">   75</span>                </div>
-<div class="line"><span class="lineno">   76</span>                back=1;</div>
-<div class="line"><span class="lineno">   77</span>            }</div>
-<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   62</span>                prev=temp;</div>
+<div class="line"><span class="lineno">   63</span>                temp=temp-&gt;parent;</div>
+<div class="line"><span class="lineno">   64</span>                level--;</div>
+<div class="line"><span class="lineno">   65</span>                x=px;</div>
+<div class="line"><span class="lineno">   66</span>                y=py;</div>
+<div class="line"><span class="lineno">   67</span>                px-=4;</div>
+<div class="line"><span class="lineno">   68</span>                <span class="keywordflow">if</span>(canvas[x][y-1]==<span class="charliteral">&#39; &#39;</span>){                    <span class="comment">// node is left oriented </span></div>
+<div class="line"><span class="lineno">   69</span>                    py+=(cols/2)/(2*(pow(div,level)))+1;</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">else</span>                                        <span class="comment">// node is right oriented</span></div>
+<div class="line"><span class="lineno">   72</span>                    py-=(cols/2)/(2*(pow(div,level)))+1;    </div>
+<div class="line"><span class="lineno">   73</span>                </div>
+<div class="line"><span class="lineno">   74</span>                back=1;</div>
+<div class="line"><span class="lineno">   75</span>            }</div>
+<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>                <span class="comment">// right node hasn&#39;t been added to canvas</span></div>
 <div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>                <span class="comment">// right node hasn&#39;t been added to canvas</span></div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>                px=x;</div>
-<div class="line"><span class="lineno">   83</span>                py=y;</div>
-<div class="line"><span class="lineno">   84</span>                x+=4;</div>
-<div class="line"><span class="lineno">   85</span>                diff=(cols/2)/(2*(pow(div,level+1)));</div>
-<div class="line"><span class="lineno">   86</span>                canvas[x][y]=<span class="charliteral">&#39;+&#39;</span>;</div>
-<div class="line"><span class="lineno">   87</span>                canvas[x][y+diff+1]=<span class="charliteral">&#39;+&#39;</span>;</div>
-<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;diff+1;i++){</div>
-<div class="line"><span class="lineno">   89</span>                    canvas[x][y+i]=<span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line"><span class="lineno">   90</span>                }</div>
-<div class="line"><span class="lineno">   91</span>                y+=diff+1;</div>
-<div class="line"><span class="lineno">   92</span>                prev=temp;</div>
-<div class="line"><span class="lineno">   93</span>                temp=temp-&gt;right;</div>
-<div class="line"><span class="lineno">   94</span>                level++;</div>
-<div class="line"><span class="lineno">   95</span>                back=0;</div>
-<div class="line"><span class="lineno">   96</span>            }</div>
-<div class="line"><span class="lineno">   97</span>        }</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   80</span>                px=x;</div>
+<div class="line"><span class="lineno">   81</span>                py=y;</div>
+<div class="line"><span class="lineno">   82</span>                x+=4;</div>
+<div class="line"><span class="lineno">   83</span>                diff=(cols/2)/(2*(pow(div,level+1)));</div>
+<div class="line"><span class="lineno">   84</span>                canvas[x][y]=<span class="charliteral">&#39;+&#39;</span>;</div>
+<div class="line"><span class="lineno">   85</span>                canvas[x][y+diff+1]=<span class="charliteral">&#39;+&#39;</span>;</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;diff+1;i++){</div>
+<div class="line"><span class="lineno">   87</span>                    canvas[x][y+i]=<span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><span class="lineno">   88</span>                }</div>
+<div class="line"><span class="lineno">   89</span>                y+=diff+1;</div>
+<div class="line"><span class="lineno">   90</span>                prev=temp;</div>
+<div class="line"><span class="lineno">   91</span>                temp=temp-&gt;right;</div>
+<div class="line"><span class="lineno">   92</span>                level++;</div>
+<div class="line"><span class="lineno">   93</span>                back=0;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>        }</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>            <span class="comment">//add the atom to the canvas</span></div>
 <div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>            <span class="comment">//add the atom to the canvas</span></div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>            canvas[x+1][y-2]=<span class="charliteral">&#39;.&#39;</span>;</div>
-<div class="line"><span class="lineno">  103</span>            canvas[x+1][y-1]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  104</span>            canvas[x+1][y]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  105</span>            canvas[x+1][y+1]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  106</span>            canvas[x+1][y+2]=<span class="charliteral">&#39;.&#39;</span>;</div>
-<div class="line"><span class="lineno">  107</span>            canvas[x+2][y-3]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  108</span>            canvas[x+2][y-2]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  109</span>            canvas[x+2][y-1]=<span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  110</span>            canvas[x+2][y]=temp-&gt;atom;</div>
-<div class="line"><span class="lineno">  111</span>            canvas[x+2][y+1]=<span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  112</span>            canvas[x+2][y+2]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  113</span>            canvas[x+2][y+3]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  114</span>            canvas[x+3][y-2]=<span class="charliteral">&#39;\&#39;&#39;</span>;</div>
-<div class="line"><span class="lineno">  115</span>            canvas[x+3][y-1]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  116</span>            canvas[x+3][y]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  117</span>            canvas[x+3][y+1]=<span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><span class="lineno">  118</span>            canvas[x+3][y+2]=<span class="charliteral">&#39;\&#39;&#39;</span>;</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">if</span>(temp-&gt;left==NULL){</div>
+<div class="line"><span class="lineno">  100</span>            canvas[x+1][y-2]=<span class="charliteral">&#39;.&#39;</span>;</div>
+<div class="line"><span class="lineno">  101</span>            canvas[x+1][y-1]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  102</span>            canvas[x+1][y]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  103</span>            canvas[x+1][y+1]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  104</span>            canvas[x+1][y+2]=<span class="charliteral">&#39;.&#39;</span>;</div>
+<div class="line"><span class="lineno">  105</span>            canvas[x+2][y-3]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  106</span>            canvas[x+2][y-2]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  107</span>            canvas[x+2][y-1]=<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  108</span>            canvas[x+2][y]=temp-&gt;atom;</div>
+<div class="line"><span class="lineno">  109</span>            canvas[x+2][y+1]=<span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  110</span>            canvas[x+2][y+2]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  111</span>            canvas[x+2][y+3]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  112</span>            canvas[x+3][y-2]=<span class="charliteral">&#39;\&#39;&#39;</span>;</div>
+<div class="line"><span class="lineno">  113</span>            canvas[x+3][y-1]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  114</span>            canvas[x+3][y]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  115</span>            canvas[x+3][y+1]=<span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><span class="lineno">  116</span>            canvas[x+3][y+2]=<span class="charliteral">&#39;\&#39;&#39;</span>;</div>
+<div class="line"><span class="lineno">  117</span>            <span class="keywordflow">if</span>(temp-&gt;left==NULL){</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>                <span class="comment">// atom is endpoint of the tree</span></div>
 <div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>                <span class="comment">// atom is endpoint of the tree</span></div>
+<div class="line"><span class="lineno">  121</span>                <span class="keywordflow">if</span>(temp-&gt;right==NULL){</div>
 <div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">if</span>(temp-&gt;right==NULL){</div>
+<div class="line"><span class="lineno">  123</span>                    <span class="comment">// going back to parent</span></div>
 <div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>                    <span class="comment">// going back to parent</span></div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>                    prev=temp;</div>
-<div class="line"><span class="lineno">  128</span>                    temp=temp-&gt;parent;</div>
-<div class="line"><span class="lineno">  129</span>                    level--;</div>
-<div class="line"><span class="lineno">  130</span>                    x=px;</div>
-<div class="line"><span class="lineno">  131</span>                    y=py;</div>
-<div class="line"><span class="lineno">  132</span>                    px=x-4;</div>
-<div class="line"><span class="lineno">  133</span>                    <span class="keywordflow">if</span>(canvas[x][y-1]==<span class="charliteral">&#39; &#39;</span>){</div>
-<div class="line"><span class="lineno">  134</span>                    py+=(cols/2)/(2*(pow(div,level)))+1;</div>
-<div class="line"><span class="lineno">  135</span>                    }</div>
-<div class="line"><span class="lineno">  136</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  137</span>                        py-=(cols/2)/(2*(pow(div,level)))+1;</div>
-<div class="line"><span class="lineno">  138</span>                    back=1;</div>
-<div class="line"><span class="lineno">  139</span>                }</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  125</span>                    prev=temp;</div>
+<div class="line"><span class="lineno">  126</span>                    temp=temp-&gt;parent;</div>
+<div class="line"><span class="lineno">  127</span>                    level--;</div>
+<div class="line"><span class="lineno">  128</span>                    x=px;</div>
+<div class="line"><span class="lineno">  129</span>                    y=py;</div>
+<div class="line"><span class="lineno">  130</span>                    px=x-4;</div>
+<div class="line"><span class="lineno">  131</span>                    <span class="keywordflow">if</span>(canvas[x][y-1]==<span class="charliteral">&#39; &#39;</span>){</div>
+<div class="line"><span class="lineno">  132</span>                    py+=(cols/2)/(2*(pow(div,level)))+1;</div>
+<div class="line"><span class="lineno">  133</span>                    }</div>
+<div class="line"><span class="lineno">  134</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  135</span>                        py-=(cols/2)/(2*(pow(div,level)))+1;</div>
+<div class="line"><span class="lineno">  136</span>                    back=1;</div>
+<div class="line"><span class="lineno">  137</span>                }</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>                <span class="comment">// travels to the left branch</span></div>
 <div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>                <span class="comment">// travels to the left branch</span></div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>                px=x;</div>
-<div class="line"><span class="lineno">  146</span>                py=y;</div>
-<div class="line"><span class="lineno">  147</span>                x+=4;</div>
-<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">if</span> (temp-&gt;atom!=<span class="charliteral">&#39;~&#39;</span>){</div>
-<div class="line"><span class="lineno">  149</span>                    diff=(cols/2)/(2*(pow(div,level+1)));</div>
-<div class="line"><span class="lineno">  150</span>                    canvas[x][y]=<span class="charliteral">&#39;+&#39;</span>;</div>
-<div class="line"><span class="lineno">  151</span>                    canvas[x][y-diff-1]=<span class="charliteral">&#39;+&#39;</span>;</div>
-<div class="line"><span class="lineno">  152</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;diff+1;i++){</div>
-<div class="line"><span class="lineno">  153</span>                        canvas[x][y-i]=<span class="charliteral">&#39;-&#39;</span>;</div>
-<div class="line"><span class="lineno">  154</span>                    }</div>
-<div class="line"><span class="lineno">  155</span>                    y-=diff+1;</div>
-<div class="line"><span class="lineno">  156</span>                }</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  158</span>                    canvas[x][y]=<span class="charliteral">&#39;+&#39;</span>;</div>
-<div class="line"><span class="lineno">  159</span>                }</div>
-<div class="line"><span class="lineno">  160</span>                prev=temp;</div>
-<div class="line"><span class="lineno">  161</span>                temp=temp-&gt;left;</div>
-<div class="line"><span class="lineno">  162</span>                level++;</div>
-<div class="line"><span class="lineno">  163</span>                back=0;</div>
-<div class="line"><span class="lineno">  164</span>            }</div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="line"><span class="lineno">  143</span>                px=x;</div>
+<div class="line"><span class="lineno">  144</span>                py=y;</div>
+<div class="line"><span class="lineno">  145</span>                x+=4;</div>
+<div class="line"><span class="lineno">  146</span>                <span class="keywordflow">if</span> (temp-&gt;atom!=<span class="charliteral">&#39;~&#39;</span>){</div>
+<div class="line"><span class="lineno">  147</span>                    diff=(cols/2)/(2*(pow(div,level+1)));</div>
+<div class="line"><span class="lineno">  148</span>                    canvas[x][y]=<span class="charliteral">&#39;+&#39;</span>;</div>
+<div class="line"><span class="lineno">  149</span>                    canvas[x][y-diff-1]=<span class="charliteral">&#39;+&#39;</span>;</div>
+<div class="line"><span class="lineno">  150</span>                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;diff+1;i++){</div>
+<div class="line"><span class="lineno">  151</span>                        canvas[x][y-i]=<span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><span class="lineno">  152</span>                    }</div>
+<div class="line"><span class="lineno">  153</span>                    y-=diff+1;</div>
+<div class="line"><span class="lineno">  154</span>                }</div>
+<div class="line"><span class="lineno">  155</span>                <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  156</span>                    canvas[x][y]=<span class="charliteral">&#39;+&#39;</span>;</div>
+<div class="line"><span class="lineno">  157</span>                }</div>
+<div class="line"><span class="lineno">  158</span>                prev=temp;</div>
+<div class="line"><span class="lineno">  159</span>                temp=temp-&gt;left;</div>
+<div class="line"><span class="lineno">  160</span>                level++;</div>
+<div class="line"><span class="lineno">  161</span>                back=0;</div>
+<div class="line"><span class="lineno">  162</span>            }</div>
+<div class="line"><span class="lineno">  163</span>        }</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>    <span class="comment">// print the final canvas</span></div>
 <div class="line"><span class="lineno">  167</span> </div>
-<div class="line"><span class="lineno">  168</span>    <span class="comment">// print the final canvas</span></div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;rows;i++){</div>
-<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;cols;j++){</div>
-<div class="line"><span class="lineno">  172</span>            printf(<span class="stringliteral">&quot;%c&quot;</span>,canvas[i][j]);</div>
-<div class="line"><span class="lineno">  173</span>        }</div>
-<div class="line"><span class="lineno">  174</span>        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  177</span>}</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;rows;i++){</div>
+<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;cols;j++){</div>
+<div class="line"><span class="lineno">  170</span>            printf(<span class="stringliteral">&quot;%c&quot;</span>,canvas[i][j]);</div>
+<div class="line"><span class="lineno">  171</span>        }</div>
+<div class="line"><span class="lineno">  172</span>        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  175</span>}</div>
 <div class="ttc" id="aheight_8c_html_ae3c058f8431dfba4087b8806057f3d15"><div class="ttname"><a href="height_8c.html#ae3c058f8431dfba4087b8806057f3d15">height</a></div><div class="ttdeci">int height(node *temp)</div><div class="ttdoc">Definition of height() function.</div><div class="ttdef"><b>Definition:</b> <a href="height_8c_source.html#l00017">height.c:17</a></div></div>
 <div class="ttc" id="astructnode_html"><div class="ttname"><a href="structnode.html">node</a></div><div class="ttdoc">Structure definition for node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00015">node.h:15</a></div></div>
 </div><!-- fragment -->

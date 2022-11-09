@@ -78,22 +78,23 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="judge_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/* -- Includes -- */</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">/* libc includes */</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdio.h&gt;</span> <span class="comment">/* for referencing to NULL, printf() and scanf() */</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/* node includes */</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;../Miscellaneous/node.h&quot;</span> <span class="comment">/* for using the node struct */</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="judge_8c.html#ac291604e53bd9b9fff8cdb29b1f2c417">   18</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="judge_8c.html#ac291604e53bd9b9fff8cdb29b1f2c417">judge</a>(<a class="code hl_struct" href="structnode.html">node</a> * temp)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> val;     <span class="comment">// contains truth value of expression created at root</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">/* -- Includes -- */</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">/* libc includes */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdio.h&gt;</span> <span class="comment">/* for referencing to NULL, printf() and scanf() */</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">/* node includes */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../Miscellaneous/node.h&quot;</span> <span class="comment">/* for using the node struct */</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="judge_8c.html#adb79a38ba516f4ebc3cbbdbdc2312921">   17</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="judge_8c.html#adb79a38ba516f4ebc3cbbdbdc2312921">judge</a>(<a class="code hl_struct" href="structnode.html">node</a> * temp, <span class="keywordtype">char</span> arr[])</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> val;     <span class="comment">// contains truth value of expression created at root</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> unique;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> a,b;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (temp-&gt;left!=NULL)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        a = <a class="code hl_function" href="judge_8c.html#ac291604e53bd9b9fff8cdb29b1f2c417">judge</a>(temp-&gt;left);      <span class="comment">// contains truth value of left branch</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        a = <a class="code hl_function" href="judge_8c.html#adb79a38ba516f4ebc3cbbdbdc2312921">judge</a>(temp-&gt;left, arr);      <span class="comment">// contains truth value of left branch</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (temp-&gt;right!=NULL)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        b = <a class="code hl_function" href="judge_8c.html#ac291604e53bd9b9fff8cdb29b1f2c417">judge</a>(temp-&gt;right);     <span class="comment">// contains truth value of right branch</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        b = <a class="code hl_function" href="judge_8c.html#adb79a38ba516f4ebc3cbbdbdc2312921">judge</a>(temp-&gt;right, arr);     <span class="comment">// contains truth value of right branch</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">char</span> ch = temp-&gt;atom;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;*&#39;</span>)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        val = a&amp;&amp;b;                 <span class="comment">// Implementing a AND b</span></div>
@@ -104,15 +105,26 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;~&#39;</span>)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        val = !a;                   <span class="comment">// Implementing NOT a</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// input truth values of the propositional atoms</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        printf(<span class="stringliteral">&quot;Enter truth value for %c: &quot;</span>,ch);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        scanf(<span class="stringliteral">&quot;%d&quot;</span>,&amp;val);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> val;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
-<div class="ttc" id="ajudge_8c_html_ac291604e53bd9b9fff8cdb29b1f2c417"><div class="ttname"><a href="judge_8c.html#ac291604e53bd9b9fff8cdb29b1f2c417">judge</a></div><div class="ttdeci">int judge(node *temp)</div><div class="ttdoc">Definition of judge() function When asked for input, enter 1 for true, 0 for false.</div><div class="ttdef"><b>Definition:</b> <a href="judge_8c_source.html#l00018">judge.c:18</a></div></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">int</span> found = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0 ; i&lt;unique ; i+=2){</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (ch == arr[i]){</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                val = (int) arr[i+1];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                found = 1;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// input truth values of the propositional atoms</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span>(!found){</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            arr[unique]=ch;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            printf(<span class="stringliteral">&quot;Enter truth value for %c: &quot;</span>,ch);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            scanf(<span class="stringliteral">&quot; %c&quot;</span>,&amp;arr[unique+1]);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            val = (int) arr[unique+1] - 48;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            unique+=2;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> val;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="ttc" id="ajudge_8c_html_adb79a38ba516f4ebc3cbbdbdc2312921"><div class="ttname"><a href="judge_8c.html#adb79a38ba516f4ebc3cbbdbdc2312921">judge</a></div><div class="ttdeci">int judge(node *temp, char arr[])</div><div class="ttdoc">Definition of judge() function When asked for input, enter 1 for true, 0 for false.</div><div class="ttdef"><b>Definition:</b> <a href="judge_8c_source.html#l00017">judge.c:17</a></div></div>
 <div class="ttc" id="astructnode_html"><div class="ttname"><a href="structnode.html">node</a></div><div class="ttdoc">Structure definition for node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00015">node.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
