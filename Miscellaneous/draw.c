@@ -15,8 +15,6 @@
 /** @brief Definition of height() function
  *
  *  This function is experimental
- * 
- *  Put profiled data here 
  *
  * @return 1
  */
