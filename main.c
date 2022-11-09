@@ -94,7 +94,8 @@ int main(){
     // evaluating truth value of the proposition 
 
     printf("\nBeginning truth value evualuation for the proposition ...\n");
-    if(judge(root)){
+    char * a = (char *) calloc(2*lenInfix+1,sizeof(char));
+    if(judge(root,a)){
         printf("\n        proposition true, done doggo a happy\n                \\ \n                 \\ \n                /^-----^\\ \n                V  o o  V\n                 |  Y  |\n                  \\ ◡ /\n                  / - \\ \n                  |    \\ \n                  |     \\     ) \n                  || (___\\====\n");
     }
     else{
@@ -102,9 +103,9 @@ int main(){
     }
 
     // free memory
-
     free(infix);
     freee(root);
+    free(a);
     printf("\n*** Memory freed ***\n");
 
     // option to run the code again for a new input
