@@ -1,5 +1,5 @@
 # CS-F214-Assignment
-This was made for an assignment to to check the proof of natural deduction in Propositional Logic.
+This was made for an assignment to check the proof of natural deduction in Propositional Logic.
 
 ## Requirements 
 * GCC
@@ -36,4 +36,4 @@ Refer to [Documentation](https://github.com/soppydart/CS-F214-Assignment/tree/ma
 ## Examples
 ![Making and running the code](https://drive.google.com/uc?export=view&id=1Ig7aoH6XK57R9XFdXjKxYH3Vm8q_28Kq)
 ![Some more running](https://drive.google.com/uc?export=view&id=1IMIDkouT61ltYLRxEQpLwGerRCfd4jvU)
-![And more running](https://drive.google.com/uc?export=view&id=1rCBqtazFwka0saDpg__SiWm8i7_UlH3G)
+![And more running](https://drive.google.com/uc?export=view&id=1-wPrr54ZxliNc-FACrRkaPPVMgahe8pX)
